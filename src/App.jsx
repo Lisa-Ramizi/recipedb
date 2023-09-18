@@ -32,12 +32,12 @@ function App() {
 
   const handleLoginClose = () => {
     setShowLoginForm(false);
-    setIsLoggedIn(true); // Set the user as logged in
+    setIsLoggedIn(true); 
   };
 
   const handleLogoutClick = () => {
-    localStorage.removeItem('username'); // Clear the stored username
-    setIsLoggedIn(false); // Set the user as logged out
+    localStorage.removeItem('username');
+    setIsLoggedIn(false);
   };
 
   return (

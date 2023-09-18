@@ -7,8 +7,8 @@ function HomeNav() {
     borderRadius: '10px',
     padding: '5px 15px',
     display: 'flex',
-    alignItems: 'center', // Center vertically
-    justifyContent: 'center', // Center horizontally
+    alignItems: 'center', 
+    justifyContent: 'center', 
     margin: '10px'
   };
 

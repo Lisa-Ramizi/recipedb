@@ -8,7 +8,7 @@ function Meals() {
 
   const getMeals = async (name) => {
     try {
-      // Convert the name to lowercase
+
       const lowercaseName = name.toLowerCase();
 
       const apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=6fee339a2090440f8019e9f7334d774f&type=${lowercaseName}&number=4`;
@@ -17,7 +17,7 @@ function Meals() {
       const data = await fetch(apiUrl);
 
       if (!data.ok) {
-        // Handle non-successful response (e.g., status 402)
+
         throw new Error(`Request failed with status ${data.status}`);
       }
 
@@ -25,7 +25,7 @@ function Meals() {
       setMeals(recipes.results);
     } catch (error) {
       console.error("Error:", error);
-      // Handle the error as needed
+
     }
   };
 
@@ -49,7 +49,7 @@ function Meals() {
               />
               <div className="card-body">
                 <h5 className="card-title">{meals[0].title}</h5>
-                <p className="card-text">{meals[0].summary}</p> {/* Display item summary */}
+                <p className="card-text">{meals[0].summary}</p> 
                 <Link to={"/recipe/" + meals[0].id}>
                     <button className="btn btn-warning rounded mt-4">Read More!</button>
                     </Link>
@@ -76,7 +76,7 @@ function Meals() {
                 <div className="col-md-8">
                   <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
-                    <p className="card-text">{item.id.summary}</p> {/* Display item summary */}
+                    <p className="card-text">{item.id.summary}</p> 
                     <Link to={"/recipe/" + item.id}>
                     <button className="btn btn-warning rounded mt-4">Read More!</button>
                     </Link>

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 function MyRecipes() {
   const [recipes, setRecipes] = useState([]);
 
-  // Retrieve recipe data from local storage on component mount
+
   useEffect(() => {
     const storedRecipes = JSON.parse(localStorage.getItem('recipes')) || [];
     setRecipes(storedRecipes);

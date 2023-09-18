@@ -6,10 +6,8 @@ function LoginForm({ onLogin }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform validation and login logic here
-    // For this example, let's just store the username in local storage
     localStorage.setItem('username', username);
-    onLogin(); // Call the onLogin callback to close the login form
+    onLogin(); 
   };
 
   return (
